@@ -1,0 +1,32 @@
+project_id = "sovereign-infinity-ai-census"
+
+[api]
+enabled = true
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 17
+
+[studio]
+enabled = true
+port = 54323
+
+[auth]
+enabled = true
+site_url = "http://localhost:8080"
+additional_redirect_urls = ["http://127.0.0.1:8080"]
+
+[functions.agent-birth-webhook]
+verify_jwt = false
+
+[functions.agent-shutdown-webhook]
+verify_jwt = false
+
+[functions.agent-telemetry-webhook]
+verify_jwt = false
+
+[functions.astra-entrypoint]
+verify_jwt = false
